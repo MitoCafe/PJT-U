@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Quiz 2</h1>
+    <div class="question">
+        <p>Já estou na aba de escrever um novo email! O que devo fazer?</p>
+        <div class="option" onclick="checkAnswer(false)">Enviar Email</div>
+        <div class="option" onclick="checkAnswer(true)">Informar para qual email quero enviar</div>
+        <div class="option" onclick="checkAnswer(false)"> Selecionar a data e enviar</div>
+    </div>
+    <p id="result"></p>
+    <a id="next" style="display:none;" href="quiz3.html">Próximo: Quiz 3</a> <!-- Mudar link para quiz 3 -->
+
+    <script>
+        function checkAnswer(isCorrect) {
+            const result = document.getElementById('result');
+            if (isCorrect) {
+                result.textContent = "Correto!";
+                document.getElementById('next').style.display = 'block';
+            } else {
+                result.textContent = "Resposta errada, tente novamente!";
+            }
+        }
+    </script>
+</body>
+
+</html>

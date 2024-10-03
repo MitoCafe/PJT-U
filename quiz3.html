@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 3: Módulo 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Quiz 3</h1>
+    <div class="question">
+        <p>Já Selecionei para qual email desejo enviar, e já escrevi o conteúdo do envio, qual o ultimo passo?</p>
+        <div class="option" onclick="checkAnswer(true)">Selecionar Data e Hora e enviar o email</div>
+        <div class="option" onclick="checkAnswer(false)">Enviar o email</div>
+        <div class="option" onclick="checkAnswer(false)">Clicar em escrever email novamente</div>
+    </div>
+    <p id="result"></p>
+    <a id="next" style="display:none;" href="certificado.html"> ÓTIMO! Clique aqui </a>
+    <!-- Mudar link para certificado -->
+
+    <script>
+        function checkAnswer(isCorrect) {
+            const result = document.getElementById('result');
+            if (isCorrect) {
+                result.textContent = "Correto!";
+                document.getElementById('next').style.display = 'block';
+            } else {
+                result.textContent = "Resposta errada, tente novamente!";
+            }
+        }
+    </script>
+</body>
+
+</html>

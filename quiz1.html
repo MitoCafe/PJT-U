@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Quiz 1</h1>
+    <div class="question">
+        <p>Após abir a pagina inicial do Gmail/Hotmail, qual o primeiro passo para mandar um email programado? </p>
+        <div class="option" onclick="checkAnswer(true)">Clicar na opção de escrever um novo email.</div>
+        <div class="option" onclick="checkAnswer(false)">Clicar na pesquisa de emails </div>
+        <div class="option" onclick="checkAnswer(false)">Clicar na Lixeira </div>
+    </div>
+    <p id="result"></p>
+    <a id="next" style="display:none;" href="quiz2.html">Próximo: Quiz 2</a> <!-- Mudar link para quiz 2 -->
+
+    <script>
+        function checkAnswer(isCorrect) {
+            const result = document.getElementById('result');
+            if (isCorrect) {
+                result.textContent = "Correto!";
+                document.getElementById('next').style.display = 'block';
+            } else {
+                result.textContent = "Resposta errada, tente novamente!";
+            }
+        }
+    </script>
+</body>
+
+</html>
